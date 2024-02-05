@@ -1,0 +1,33 @@
+{
+  "name": "ts-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run:assesment:dev": "cypress run --config baseUrl=https://assessment-overview.azurewebsites.net/ --env environment=dev,TAGS=\"not (@notimplemented or @ignore)\"",
+    "cy:open:assesment:dev": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open --config baseUrl=https://assessment-overview.azurewebsites.net/ --env environment=dev --browser chrome",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "cypress": "^13.6.3",
+    "multiple-cucumber-html-reporter": "^3.6.1",
+    "typescript": "^5.3.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/StepDefs/**/*.{js,ts}",
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumber-json/cucumber-report.json"
+    },
+    "html": {
+      "enabled": true,
+      "output": "reports/cucumber-report.html"
+    }
+  }
+}

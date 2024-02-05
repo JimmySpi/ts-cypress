@@ -3,9 +3,9 @@ This wiki includes the steps for configuring and running the automation tests of
 
 
 # STEP 1
-## Clone the 'assessment' project in a local folder. 
+## Clone the 'ts-cypress' project in a local folder. 
 Navigate to a local folder of your preference, open a Git Bash window and run the command:
-* git clone https://echa-ecm@dev.azure.com/echa-ecm/OAT/_git/assessment
+* git clone https://github.com/JimmySpi/ts-cypress.git
 
 
 # STEP 2
@@ -31,12 +31,15 @@ Navigate to a local folder of your preference, open a Git Bash window and run th
 # STEP 3
 ## Run the tests in the required environment
 The automation tests can be ran locally in headless mode, by executing the following commands in the Terminal of the IDE:
- * Run all tests in DEV in Chrome browser. This is done by running npm script from package json "npm run <script_name>" (For the moment dummy POC questionnaire features): 
-   "npm run cy:run:assesment:dev"
-A batch jod will be initiated which will start executing the tests in headless mode
+* Open cypress and run/dubug tests with Cypress UI in Browser: This is done by running npm script from package json "npm run <script_name>" (example): 
+   npm run cy:open:assesment:dev" 
 
- * Open cypress and run/dubug tests:
-   npm run cy:open:assesment:dev"
+   Debug: in .vscode there is launch.json with the debugger to attach at port 9222. Note in package.json open script the following:
+   cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222
+
+* Run all tests in DEV in Chrome browser. This is done by running npm script from package json "npm run <script_name>" (example): 
+   "npm run cy:run:assesment:dev"
+   A batch jod will be initiated which will start executing the tests in headless mode
 
 # STEP 4
 ## Export an html report with the results of the execution (2 options available)

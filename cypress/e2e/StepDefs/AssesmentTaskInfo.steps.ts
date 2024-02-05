@@ -28,6 +28,7 @@ Given("assesment task has been available to the user", () => {
 When("user lands on assesment Page", () => {
     cy.logg('assesmentID: '+assesmentID) 
     cy.visit("/assessment?id="+assesmentID);
+    cy.wait(5000)
     cy.title().should('eq', 'AssesmentOverview')
 });
 

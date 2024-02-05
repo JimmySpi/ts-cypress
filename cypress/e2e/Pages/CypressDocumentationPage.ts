@@ -7,12 +7,12 @@ export class CypressDocumentationPage {
 
     selectGettingStartedTab() {
         cy.logr("going to click the link")
-        cy.get(':nth-child(2) > .menu__list-item-collapsible > .menu__link').click()
+        cy.get(':nth-child(2) > :nth-child(1) > .transition-all > .overflow-hidden > :nth-child(2) > .group').click()
     }
 
     selectGettingStartedTabErr() {
         cy.logr("going to click the error link")
-        cy.get(':nth-child(2) > .menu__list-item-collapsible > .menu__linkk').click()
+        cy.get(':nth-child(2) > :nth-child(1) > .transition-all > .overflow-hidden > :nth-child(2) > .groupp').click()
     }
     
 }

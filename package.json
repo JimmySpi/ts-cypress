@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run:assesment:dev": "cypress run --config baseUrl=https://assessment-overview.azurewebsites.net/ --env environment=dev,TAGS=\"not (@notimplemented or @ignore)\"",
+    "cy:open:dummyPoc:dev": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open --config baseUrl=https://docs.cypress.io/ --env environment=dev --browser chrome",
+    "cy:run:dummyPoc:dev": "cypress run --config baseUrl=https://docs.cypress.io/ --env environment=dev,TAGS=\"@CypressGettingStarted1\"",
     "cy:open:assesment:dev": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open --config baseUrl=https://assessment-overview.azurewebsites.net/ --env environment=dev --browser chrome",
+    "cy:run:assesment:dev": "cypress run --config baseUrl=https://assessment-overview.azurewebsites.net/ --env environment=dev,TAGS=\"@STAS1\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

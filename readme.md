@@ -78,6 +78,8 @@ To run all scenarios with this specified tag we have to replace TAGS value with 
 ## Install VS Code plugins
 Click on Extensions tab and install
     - Cucumber (Gherkin) Full Support
+
+NO NEED IF .VSCODE IS NOT IN GITIGNORE:    
 Add a !git-ignored! folder ".vscode" to root path and add settings.json with following config code:
 <!-- {
     "cucumberautocomplete.steps": [
@@ -86,5 +88,6 @@ Add a !git-ignored! folder ".vscode" to root path and add settings.json with fol
     "cucumberautocomplete.strictGherkinCompletion": false
 }  -->
 
+extra resources as notes:
 https://www.codemotion.com/magazine/frontend/web-developer/how-to-set-up-a-cypress-typescript-project/
 https://docs.cypress.io/guides/references/configuration -> ts
